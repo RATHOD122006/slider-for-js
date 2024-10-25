@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Slider</title>
+    <style>
+        .slider {
+            position: relative;
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 550px;
+            margin-top: 90px;
+        }
+
+        .slides {
+            display: flex;
+            scroll-behavior: smooth;
+            overflow-x: hidden  ;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" class="slide" alt="Slide 1">
+            <img src="https://uhdwallpapers.org/uploads/cache/3986204128/the-butterfly-feeding-with-nectar_400x225-mm-90.jpg" class="slide" alt="Slide 2">
+            <img src="https://img.freepik.com/premium-photo/rainbow-leaf-with-rain-drops-it_1030138-2684.jpg?semt=ais_hybrid" class="slide" alt="Slide 3">
+        </div>
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+    <script>
+        // Ensure that the IDs match between the HTML and JavaScript
+        let slides = document.getElementById("slides");
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+
+        prev.addEventListener('click', () => {
+            slides.scrollLeft -= 800;
+        });
+
+        next.addEventListener('click', () => {
+            slides.scrollLeft += 800;
+        });
+    </script>
+</body>
+</html>
