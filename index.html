@@ -51,6 +51,12 @@
             <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" class="slide" alt="Slide 1">
             <img src="https://uhdwallpapers.org/uploads/cache/3986204128/the-butterfly-feeding-with-nectar_400x225-mm-90.jpg" class="slide" alt="Slide 2">
             <img src="https://img.freepik.com/premium-photo/rainbow-leaf-with-rain-drops-it_1030138-2684.jpg?semt=ais_hybrid" class="slide" alt="Slide 3">
+            <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" class="slide" alt="Slide 1">
+            <img src="https://uhdwallpapers.org/uploads/cache/3986204128/the-butterfly-feeding-with-nectar_400x225-mm-90.jpg" class="slide" alt="Slide 2">
+            <img src="https://img.freepik.com/premium-photo/rainbow-leaf-with-rain-drops-it_1030138-2684.jpg?semt=ais_hybrid" class="slide" alt="Slide 3">
+            <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" class="slide" alt="Slide 1">
+            <img src="https://uhdwallpapers.org/uploads/cache/3986204128/the-butterfly-feeding-with-nectar_400x225-mm-90.jpg" class="slide" alt="Slide 2">
+            <img src="https://img.freepik.com/premium-photo/rainbow-leaf-with-rain-drops-it_1030138-2684.jpg?semt=ais_hybrid" class="slide" alt="Slide 3">
         </div>
         <button id="prev">&#10094;</button>
         <button id="next">&#10095;</button>
@@ -60,6 +66,14 @@
         let slides = document.getElementById("slides");
         let prev = document.getElementById("prev");
         let next = document.getElementById("next");
+
+       document.addEventListener("keydown", (event) => {
+            if (event.key === 'ArrowLeft') {
+                slides.scrollLeft -= 800; 
+            } else if (event.key === 'ArrowRight') {
+                slides.scrollLeft += 800;
+            }
+        });
 
         prev.addEventListener('click', () => {
             slides.scrollLeft -= 800;
